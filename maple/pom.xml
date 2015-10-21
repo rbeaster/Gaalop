@@ -16,7 +16,7 @@
             <plugin>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr3-maven-plugin</artifactId>
-                <version>3.1.1.2</version>
+                <version>3.5.2</version>
                 <executions>
                     <execution>
                         <goals>
@@ -30,7 +30,8 @@
                       Otherwise the .token files will not be found.
                       See http://mojo.codehaus.org/antlr3-maven-plugin/examples/tokenVocab.html
                     -->
-                    <libDirectory>target/generated-sources/antlr/de/gaalop/maple/parser</libDirectory>
+		    <sourceDirectory>src/main/antlr</sourceDirectory>
+		    <outputDirectory>src/main/antlr</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
@@ -50,7 +51,7 @@
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr-runtime</artifactId>
-            <version>3.1.1</version>
+            <version>3.5.2</version>
             <type>jar</type>
         </dependency>
         <dependency>
